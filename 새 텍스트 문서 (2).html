@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel & Hobby Portfolio</title>
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3, .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-bg {
+            /* Replace with your own high-quality cover image */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .gallery-image {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="fixed w-full z-50 transition-all duration-300" id="header">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center bg-white/90 backdrop-blur-sm shadow-sm rounded-b-lg">
+            <a href="#" class="text-xl font-bold tracking-widest uppercase text-gray-800">Wanderlust.</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">About</a>
+                <a href="#destinations" class="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">Destinations</a>
+                <a href="#journal" class="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">Journal</a>
+            </nav>
+            <!-- Mobile Menu Button (simplified for aesthetics) -->
+            <button class="md:hidden text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center justify-center text-center px-4">
+        <div class="max-w-3xl text-white">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">Capturing the World</h1>
+            <p class="text-lg md:text-2xl font-light mb-10 opacity-90">여행을 통해 세상을 보고, 기록으로 순간을 남깁니다.</p>
+            <a href="#destinations" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors">Explore My Journey</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">About My Hobby</h2>
+                <div class="w-16 h-1 bg-gray-800 mx-auto"></div>
+            </div>
+            <div class="md:flex items-center gap-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <!-- Profile or conceptual image -->
+                    <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Traveler with camera" class="rounded-lg shadow-lg w-full object-cover aspect-[4/5]">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">새로운 풍경을 담는 즐거움</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        여행은 단순한 휴식을 넘어 저에게 새로운 영감을 주는 가장 좋은 취미입니다. 낯선 도시의 골목을 걷고, 자연의 경이로움을 마주하며 느낀 감정들을 사진과 짧은 글로 기록하는 것을 좋아합니다.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        이 공간은 제가 다녀온 장소들에 대한 개인적인 아카이브이자, 카메라 렌즈를 통해 바라본 세상의 조각들을 모아둔 포트폴리오입니다.
+                    </p>
+                    <ul class="space-y-2 text-gray-600 font-medium">
+                        <li class="flex items-center"><span class="mr-2 text-gray-400">📍</span> 주요 관심사: 풍경 사진, 로컬 문화 체험, 아날로그 기록</li>
+                        <li class="flex items-center"><span class="mr-2 text-gray-400">✈️</span> 방문한 국가: 10+ 개국</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations / Gallery Section -->
+    <section id="destinations" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Recent Destinations</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">발길이 닿았던 곳, 그리고 그곳에서 남긴 장면들</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Destination 1 -->
+                <div class="group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Paris" class="w-full h-full object-cover gallery-image">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">2025. 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">프랑스 파리</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">비가 내린 뒤 몽마르뜨 언덕에서 바라본 시내 전경. 흐린 날씨 특유의 차분한 분위기를 담으려 노력했다.</p>
+                        <a href="#" class="text-gray-900 font-medium text-sm hover:underline inline-flex items-center">View More <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                    </div>
+                </div>
+
+                <!-- Destination 2 -->
+                <div class="group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542051842920-c0c60f52d5db?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kyoto" class="w-full h-full object-cover gallery-image">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">2025. 04</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">일본 교토</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">봄의 교토. 고즈넉한 사찰과 흩날리는 벚꽃의 조화가 아름다웠던 여행. 필름 카메라 느낌으로 색감을 보정했다.</p>
+                        <a href="#" class="text-gray-900 font-medium text-sm hover:underline inline-flex items-center">View More <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                    </div>
+                </div>
+
+                <!-- Destination 3 -->
+                <div class="group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Grand Canyon" class="w-full h-full object-cover gallery-image">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">2024. 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">미국 그랜드 캐니언</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">자연의 거대함 앞에 압도당했던 순간. 광각 렌즈를 활용해 탁 트인 시야를 최대한 프레임에 담았다.</p>
+                        <a href="#" class="text-gray-900 font-medium text-sm hover:underline inline-flex items-center">View More <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                    </div>
+                </div>
+                
+                <!-- Destination 4 -->
+                 <div class="group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dubai" class="w-full h-full object-cover gallery-image">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">2024. 08</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">아랍에미리트 두바이</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">사막의 붉은 노을과 끝없이 이어진 모래 언덕. 실루엣을 강조한 사진을 주로 남겼다.</p>
+                        <a href="#" class="text-gray-900 font-medium text-sm hover:underline inline-flex items-center">View More <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                    </div>
+                </div>
+
+                 <!-- Destination 5 -->
+                 <div class="group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://plus.unsplash.com/premium_photo-1661962495669-d72424626bdc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jeju" class="w-full h-full object-cover gallery-image">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">2023. 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">대한민국 제주도</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">늦가을의 오름. 억새밭 사이를 거닐며 고요한 제주만의 정취를 가득 느끼고 왔다.</p>
+                        <a href="#" class="text-gray-900 font-medium text-sm hover:underline inline-flex items-center">View More <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                    </div>
+                </div>
+
+                 <!-- Destination 6 -->
+                 <div class="group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bangkok" class="w-full h-full object-cover gallery-image">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">2023. 02</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">태국 방콕</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">활기찬 야시장과 화려한 사원들. 역동적인 도시의 에너지를 스냅 사진으로 포착했다.</p>
+                        <a href="#" class="text-gray-900 font-medium text-sm hover:underline inline-flex items-center">View More <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Journal Section -->
+    <section id="journal" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Travel Journal</h2>
+                <p class="text-gray-500">여행 중 남긴 짧은 단상들</p>
+            </div>
+            
+            <div class="space-y-12 border-l-2 border-gray-100 pl-8 ml-4">
+                
+                <!-- Entry 1 -->
+                <div class="relative">
+                    <span class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white bg-gray-300"></span>
+                    <span class="text-sm font-bold text-gray-400 uppercase tracking-wider">Oct 24, 2025 - Paris</span>
+                    <h3 class="text-xl font-semibold mt-2 mb-3 text-gray-800">센 강변을 따라 걷다</h3>
+                    <p class="text-gray-600 leading-relaxed italic border-l-4 border-gray-200 pl-4">
+                        "여행지에서의 비는 불편함을 주기도 하지만, 평소와는 다른 도시의 민낯을 보여준다. 물기를 머금은 자갈길과 회색빛 하늘이 묘하게 로맨틱했던 하루. 유명한 관광지를 벗어나 골목 어귀의 작은 카페에서 마신 에스프레소 한 잔이 이번 여행에서 가장 기억에 남는 순간이 될 것 같다."
+                    </p>
+                </div>
+
+                <!-- Entry 2 -->
+                <div class="relative">
+                    <span class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white bg-gray-300"></span>
+                    <span class="text-sm font-bold text-gray-400 uppercase tracking-wider">Apr 12, 2025 - Kyoto</span>
+                    <h3 class="text-xl font-semibold mt-2 mb-3 text-gray-800">시간이 멈춘 듯한 공간</h3>
+                    <p class="text-gray-600 leading-relaxed italic border-l-4 border-gray-200 pl-4">
+                        "화려한 네온사인 대신 목조 건물의 따뜻함이 있는 곳. 새벽 일찍 산책을 나선 덕분에 관광객들로 붐비기 전의 한적한 거리를 온전히 느낄 수 있었다. 셔터 소리마저 방해가 될까 조심스러웠던 고요한 아침의 기록."
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold mb-4 tracking-widest uppercase">Wanderlust.</h2>
+            <p class="text-gray-400 mb-6 text-sm">기록하지 않으면 사라질 순간들을 위해.</p>
+            <div class="flex justify-center space-x-4 mb-8">
+                <!-- Placeholder for social icons -->
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Email</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2026 Travel Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Simple script for header background change on scroll -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
